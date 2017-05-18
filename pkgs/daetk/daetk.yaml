@@ -10,7 +10,7 @@ defaults:
 when petscversion == '3.6.1':
   sources:
   - url: https://github.com/erdc-cm/daetk.git
-    key: git:1d61f1a6942730ed5b964f5b9241568ca4acf0b6
+    key: git:faacf9fd1c09756d41e8422d8a46c517b9217abd
 when petscversion == '3.5.2':
   sources:
   - url: https://github.com/erdc-cm/daetk.git

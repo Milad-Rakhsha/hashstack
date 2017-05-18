@@ -18,7 +18,7 @@ packages:
   launcher:
   cmake:
   openssl:
-    #use: host-openssl
+    use: host-openssl
   python:
     host: false
     link: shared
@@ -87,4 +87,3 @@ packages:
   jupyter-pip:
   pythreejs:
   jupyter:
-#  scorec:

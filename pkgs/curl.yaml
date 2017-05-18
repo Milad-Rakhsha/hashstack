@@ -21,8 +21,8 @@ defaults:
   use_ca_bundle: false
 
 sources:
-  - url: http://curl.haxx.se/download/curl-7.37.0.tar.gz
-    key: tar.gz:dl6tespqw6zufuqodtfmxpasggdziyrs
+  - url: http://curl.haxx.se/download/curl-7.38.0.tar.gz
+    key: tar.gz:kzqqfcvgkmuif6rcrtjdzgo5xofyozb5
 
 build_stages:
 - when: use_ca_bundle
