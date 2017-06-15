@@ -4,8 +4,8 @@ dependencies:
   run: [zlib]
 
 sources:
-- key: tar.gz:5inoxyucggktp6znjv4al5dy3vha4bod
-  url: http://download.osgeo.org/libtiff/tiff-4.0.3.tar.gz
+- key: tar.gz:rsy5sdew6yon7qf46a3kzqsrzhn6mmqd
+  url: http://download.osgeo.org/libtiff/tiff-4.0.4.tar.gz
 
 build_stages:
 - name: configure

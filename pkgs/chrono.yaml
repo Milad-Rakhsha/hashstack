@@ -1,8 +1,10 @@
 extends: [cmake_package]
 
 sources:
-- key: tar.gz:tiwcmpwvbkpyc7tyyuprtxiziaq7inho
-  url: https://github.com/projectchrono/chrono/archive/51cb0c88a3ae1eece127322fea081e9a140de3d4.tar.gz
+# - key: tar.gz:tiwcmpwvbkpyc7tyyuprtxiziaq7inho
+#   url: https://github.com/projectchrono/chrono/archive/51cb0c88a3ae1eece127322fea081e9a140de3d4.tar.gz
+- url: https://github.com/projectchrono/chrono.git
+  key: git:00e5309ba0d0eccf59c1054f36f1f77a55926397
 
 defaults:
   relocatable: false
@@ -11,7 +13,7 @@ dependencies:
   build:
     - bzip2
     - python
-    - irrlicht
+    # - irrlicht
     - zlib
     - openjpeg
     - png
@@ -25,10 +27,10 @@ build_stages:
   extra:
     - '-DENABLE_UNIT_CASCADE:BOOL=ON'
     - '-DENABLE_MODULE_FEA:BOOL=ON'
-    - '-DENABLE_MODULE_IRRLICHT:BOOL=ON'
+    - '-DENABLE_MODULE_IRRLICHT:BOOL=OFF'
     - '-DENABLE_MODULE_POSTPROCESS:BOOL=ON'
     - '-DENABLE_MODULE_VEHICLE:BOOL=ON'
-    - '-DENABLE_MODULE_FSI:BOOL=ON'
+    - '-DENABLE_MODULE_FSI:BOOL=OFF'
     - '-DENABLE_OPENMP:BOOL=ON'
     - '-DENABLE_MODULE_PYTHON:BOOL=OFF'
     - '-DENABLE_MODULE_COSIMULATION:BOOL=OFF'
