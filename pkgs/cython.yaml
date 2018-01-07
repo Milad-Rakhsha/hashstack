@@ -8,7 +8,7 @@ extends: [distutils_package]
 #   url: file:/home/milad/Dropbox/Cython-0.19.2.tar.gz
 sources:
 - key: tar.gz:6fa5d6ocpid3lkj7pxcthfdsaz7c24ka
-  url: file:/home/milad/Downloads/Cython-0.25.2.tar.gz
+  url: file:/home/milad/Repos/proteus/stack/Cython-0.25.2.tar.gz
 
 
 when_build_dependency:

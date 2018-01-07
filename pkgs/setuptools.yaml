@@ -7,6 +7,7 @@ build_stages:
   - name: install
     mode: override
     handler: bash
+
     bash: |
       ${PYTHON} setup.py install --prefix=. --root=${ARTIFACT} --single-version-externally-managed
 

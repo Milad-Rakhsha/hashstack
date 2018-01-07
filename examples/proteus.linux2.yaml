@@ -1,4 +1,5 @@
-# This profile file controls your <#> (HashDist) build environment.
+# This 
+# profile file controls your <#> (HashDist) build environment.
 
 # In the future, we'll provide better incorporation of
 # automatic environment detection.  For now, have a look
@@ -19,6 +20,7 @@ packages:
   cmake:
   openssl:
     #use: host-openssl
+  pip:
   python:
     host: false
     link: shared
@@ -36,8 +38,10 @@ packages:
   coverage:
   hdf5:
   matplotlib:
+  pillow:
+  pytables:
   petsc:
-    version: 3.6.1
+    version: 3.7.5
     build_with: |
       parmetis
     download: |
@@ -46,10 +50,8 @@ packages:
     link: shared
     debug: false
   petsc4py:
-    version: 3.6.0
-    with_conf: true
-  pillow:
-  pytables:
+    version: 3.7.0
+    with_conf: true      
   sphinx:
   sphinx-bootstrap-theme:
   superlu:
@@ -81,10 +83,10 @@ packages:
   rtree:
   ode:
   ipdb:
-  pip:
   pexpect:
   pcs_api:
   jupyter-pip:
   pythreejs:
+  chrono:
   jupyter:
-#  scorec:
+  scorec:

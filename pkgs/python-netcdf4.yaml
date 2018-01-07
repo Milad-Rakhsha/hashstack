@@ -9,7 +9,7 @@ dependencies:
 
 sources:
 - key: tar.gz:th26v25of6xje5m5co3zbxpeejvsxded
-  url: file:/home/milad/Dropbox/netCDF4-1.0.4.tar.gz
+  url: file:/home/milad/Repos/proteus/stack/netCDF4-1.0.4.tar.gz
 
 build_stages:
 - name: set_mpi_wrapper
