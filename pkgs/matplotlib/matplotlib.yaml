@@ -18,7 +18,6 @@ build_stages:
   handler: bash
   bash: |
     patch -p1 < _hashdist/fix_cxx_reserved_identifiers.patch
-
 - name: libflags
   before: install
 
@@ -31,7 +30,6 @@ build_stages:
         old_rpath=$(${PATCHELF} --print-rpath ${lib})
         ${PATCHELF} --set-rpath $old_rpath:${BZIP2_DIR}/lib:${FREETYPE_DIR}/lib:${PNG_DIR}/lib:${ZLIB_DIR} ${lib}
     done
-
 profile_links:
   - name: mpl_packages
     link: 'lib/python{{pyver}}/site-packages/mpl_toolkits/**/*'
@@ -42,3 +40,4 @@ profile_links:
     exclude: 'lib/python{{pyver}}/site-packages/mpl_toolkits/**/*'
 
 licenses: [matplotlib]
+

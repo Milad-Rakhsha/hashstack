@@ -3,9 +3,12 @@ dependencies:
   build: [mpi, parmetis, zoltan]
 
 sources:
-  - url: https://github.com/scorec/core.git
-    key: git:dfd8e6026257595eac7464cccf43d937b7aec294
+        #- url: https://github.com/scorec/core.git
+        #key: git:dfd8e6026257595eac7464cccf43d937b7aec294
 
+  - url: https://github.com/SCOREC/core.git
+    key: git:e219777edd875d35096dfedd7197300b8e2f3837
+    
 defaults:
   relocatable: true
 

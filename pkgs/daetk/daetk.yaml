@@ -8,14 +8,15 @@ defaults:
   petscversion: '3.7.5'
 
 when petscversion == '3.7.5':
-  sources:
-  - key: tar.gz:ggkr3upxu74syj5bq22fx4ha2ewzzyun
-    url: https://github.com/erdc-cm/daetk/archive/1.0.0.tar.gz
+   sources:
+   - key: tar.gz:ggkr3upxu74syj5bq22fx4ha2ewzzyun
+     url: https://github.com/erdc-cm/daetk/archive/1.0.0.tar.gz
 
 when petscversion == '3.6.1':
   sources:
   - url: https://github.com/erdc-cm/daetk.git
     key: git:faacf9fd1c09756d41e8422d8a46c517b9217abd
+
 when petscversion == '3.5.2':
   sources:
   - url: https://github.com/erdc-cm/daetk.git

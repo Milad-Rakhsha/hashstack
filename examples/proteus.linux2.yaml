@@ -17,7 +17,7 @@ extends:
 packages:
   clawpack:
   launcher:
-  cmake:
+  cmake: 
   openssl:
     #use: host-openssl
   pip:
@@ -32,14 +32,13 @@ packages:
     use: host-lapack
   daetk:
   mpi:
-    use: host-mpi
+    use: mpich
+    #use: host-mpi
   mpi4py:
   nose:
   coverage:
   hdf5:
   matplotlib:
-  pillow:
-  pytables:
   petsc:
     version: 3.7.5
     build_with: |
@@ -51,7 +50,9 @@ packages:
     debug: false
   petsc4py:
     version: 3.7.0
-    with_conf: true      
+    with_conf: true
+  pillow:
+  pytables:
   sphinx:
   sphinx-bootstrap-theme:
   superlu:

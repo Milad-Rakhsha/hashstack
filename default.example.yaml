@@ -37,7 +37,7 @@ packages:
 # <#>-built SciPy is currently only working on Debian.
   #scipy:
   #  use: host-scipy
-
+  pip:
   mpi:
     use: host-mpi
   blas:
@@ -46,6 +46,7 @@ packages:
     use: host-lapack
 
   nose:
+  openjpeg:
   hdf5:
   jinja2:
   petsc:

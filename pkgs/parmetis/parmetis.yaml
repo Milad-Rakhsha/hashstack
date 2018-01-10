@@ -57,4 +57,4 @@ build_stages:
     make -C _build_parmetis install
 profile_links:
 - name: everything
-link: '*/**/*'
+  link: '*/**/*'

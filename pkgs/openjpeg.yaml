@@ -23,5 +23,3 @@ build_stages:
     ln -s ${ARTIFACT}/include/openjpeg-1.5/openjpeg.h ${ARTIFACT}/include/openjpeg.h
     ln -s ${ARTIFACT}/include/openjpeg-1.5/opj_stdint.h ${ARTIFACT}/include/opj_stdint.h
     ln -s ${ARTIFACT}/include/openjpeg-1.5/opj_config.h ${ARTIFACT}/include/opj_config.h
-
-
