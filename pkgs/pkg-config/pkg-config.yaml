@@ -9,8 +9,10 @@ defaults:
   relocatable: false
 
 sources:
+        #- key: tar.bz2:yqfhovb74xdslg4bh5yn3lzctqtwbisq
+        #  url: http://rabbit.dereferenced.org/~nenolod/distfiles/pkgconf-0.9.6.tar.bz2
 - key: tar.bz2:yqfhovb74xdslg4bh5yn3lzctqtwbisq
-  url: http://rabbit.dereferenced.org/~nenolod/distfiles/pkgconf-0.9.6.tar.bz2
+  url: file:/home/milad/Dropbox/pkgconf-0.9.6.tar.bz2
 
 build_stages:
 - name: install_wrapper

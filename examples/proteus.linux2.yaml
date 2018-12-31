@@ -31,26 +31,26 @@ packages:
     use: openblas-lapack
   daetk:
   mpi:
-    use: mpich
+    use: host-mpi
   mpi4py:
   nose:
   coverage:
   hdf5:
   petsc:
-    version: 3.7.6
+    version: 'master'
 #    version: 3.8.4
     openblas: true
     build_with: |
       parmetis, cmake, blas
     download: |
-      superlu, superlu_dist, hypre, blacs, scalapack, mumps
+      superlu, hypre, blacs, scalapack, mumps
     coptflags: -O2
     link: shared
     debug: false
   petsc4py:
-    version: 3.7.0
 #    version: 3.8.1
-    with_conf: true
+     version: 'master'
+     with_conf: true
   pytables:
   tetgen: #3D simplex mesh generator
   triangle: #2D simplex mesh generator
@@ -116,7 +116,7 @@ packages:
   #pythreejs:
   #proteus:
   #sympy: #symbolic math library
-  #ode: #library which has ode solvers
+  ode: #library which has ode solvers
   #pygments:
   #pillow: #python imaging library
   #launcher:

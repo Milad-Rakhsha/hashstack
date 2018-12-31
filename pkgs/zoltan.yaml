@@ -1,39 +1,35 @@
 extends: [autotools_package]
 dependencies:
-  build: [mpi, parmetis, {{build_with}}]
+  build: [mpi, {{build_with}}]
 
 sources:
-- key: tar.gz:2dly7xvlpi4fzb6tmzvyvdohjcmu74cn
-  url: http://www.cs.sandia.gov/~kddevin/Zoltan_Distributions/zoltan_distrib_v3.83.tar.gz
+        #- key: tar.gz:lpoumvepxhdtwis3xtz5ebwfldbrrszj
+        #  url: http://www.cs.sandia.gov/~kddevin/Zoltan_Distributions/zoltan_distrib_v3.8.tar.gz
+        - key: tar.gz:2dly7xvlpi4fzb6tmzvyvdohjcmu74cn
+          url: http://www.cs.sandia.gov/~kddevin/Zoltan_Distributions/zoltan_distrib_v3.83.tar.gz
+        #- key: tar.gz:bfn5577hgdsg4zog56e4rqkv47tytdf6
+        #  url: http://www.cs.sandia.gov/~kddevin/Zoltan_Distributions/zoltan_distrib_v3.82.tar.gz
+
 
 defaults:
   #include/Makefile.export.zoltan.macros
   relocatable: false
 
 build_stages:
-- name: setup_builddir
-  after: prologue
-  handler: bash
-  bash: |
-    mkdir -p _build
-    cd _build
 
-- name: setEnv
-  after: setup_builddir
-  handler: bash
-  bash: |
-    export MPI_DIR=$MPI_ROOT
-    export CC=$MPICC
-    export CXX=$MPICXX
-    export FC=$MPIF90
-
-- name: configure
-  after: setEnv
-  configure_path: ".."
-  extra: ['--enable-mpi',
-          '--with-cflags="-fPIC"',
-          '--with-cxxflags="-fPIC"',
-          '--with-fcflags="-fPIC"',
-          '--with-parmetis',
-          '--with-parmetis-libdir=${PARMETIS_DIR}/lib',
-          '--with-parmetis-incdir=${PARMETIS_DIR}/include']
+  - name: setup_builddir
+    after: prologue
+    handler: bash
+    bash: |
+      mkdir -p _build
+      cd _build
+  - name: setEnv
+    after: setup_builddir
+    handler: bash
+    bash: |
+      export MPI_DIR=$(dirname $(dirname $MPICC) )
+      export LD_LIBRARY_PATH=${MPI_DIR}/lib
+  - name: configure
+    after: setEnv
+    configure_path: ".."
+    extra: ['--with-cflags=-fPIC', '--with-cxxflags=-fPIC']

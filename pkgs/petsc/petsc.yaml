@@ -4,7 +4,7 @@ dependencies:
 
 when version == 'master':
   sources:
-  - key: git:8c405a35e3463db34467c44b5b94e7b81d895f6d
+  - key: git:1b452f274e2889972e9f8af56548b4172bf5b6ab
     url: https://bitbucket.org/petsc/petsc
 when version == '3.8.4':
   sources:
