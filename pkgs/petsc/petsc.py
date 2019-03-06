@@ -179,7 +179,10 @@ def configure(ctx, stage_args):
                           bool(stage_args['link'] == 'shared'))
     # must explicitly set --with-debugging=0 to disable debugging
     conf_lines.append('--with-debugging=%d' % stage_args['debug'])
-
+    
+    #if 'SUPERLU_DIST' in ctx.dependency_dir_vars:
+    conf_lines.append('--with-cxx-dialect=C++11')
+    #print 'conf_lines:\n',conf_lines
     # Special case, openssl provides ssl
     if 'OPENSSL' in ctx.dependency_dir_vars:
         conf_lines.append('--with-ssl=1')

@@ -34,6 +34,13 @@ cd hashstack
 cp cloud.sagemath.yaml default.yaml
 hit build
 ```
+To build the profile in parallel you may do:
+```
+hit build -v -j 8
+```
+
+
+
 You can now for example run the IPython Notebook as follows:
 ```
 ./default/bin/ipython notebook

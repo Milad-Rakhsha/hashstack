@@ -31,11 +31,13 @@ packages:
     use: openblas-lapack
   daetk:
   mpi:
-    use: host-mpi
+   #use: host-mpi
+   use: mpich
   mpi4py:
   nose:
   coverage:
   hdf5:
+  superlu:
   petsc:
     version: 'master'
 #    version: 3.8.4
